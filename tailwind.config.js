@@ -7,7 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary": "#FF1584"
+        "primary": "#FF1584",
+      },
+      boxShadow: {
+        "outer": "0px 0px 10px 0px rgba(0, 0, 0, 0.25)"
       }
     },
   },
