@@ -78,6 +78,8 @@ const onSubmit = async () => {
         await noteStore.createNote(data)
     else await noteStore.editNote(props.id ?? 0, data)
 
+    data.title = ""
+    data.content = ""
     submit.value = false
     isOpen.value = false
 }
