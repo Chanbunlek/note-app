@@ -5,3 +5,8 @@ export interface Notes {
     createdAt: Date;
     updatedAt: Date;
 }
+
+export interface CreateNote {
+    title: string,
+    content: string
+}
