@@ -10,8 +10,7 @@
       <PlusIcon @click="isCreate = true" class="w-8 h-8 border-[2px] cursor-pointer border-primary rounded"></PlusIcon>
     </div>
 
-    <div class="flex p-2 justify-between gap-2">
-
+    <div class="flex p-2 justify-between gap-2 flex-wrap">
       <Listbox v-model="selectedOption">
         <div class="relative mt-1">
           <div class="flex gap-1 items-center">
@@ -60,7 +59,8 @@
     </div>
 
     <div class="flex flex-wrap gap-[10px] p-[20px]">
-      <Box v-for="(note, idx) in notes" :key="idx" :id="note.id" :content="note.content" :title="note.title" :created-at="note.createdAt"></Box>
+      <Box v-for="(note, idx) in notes" :key="idx" :id="note.id" :content="note.content" :title="note.title"
+        :created-at="note.createdAt"></Box>
     </div>
 
     <ModifyDialog v-model:is-open="isCreate"></ModifyDialog>
